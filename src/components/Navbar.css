@@ -1,0 +1,30 @@
+.navbar {
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  top: 60px;
+  position: sticky;
+  z-index: 100;
+}
+
+.navbar__options {
+  max-width: auto;
+  height: 44px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding-bottom: 5px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.navbar__optionLineOne:hover {
+  cursor: pointer;
+  z-index: 100;
+}
+
+.navbar__optionLineOne {
+  font-size: 20px;
+  font-weight: 600;
+  z-index: 100;
+}

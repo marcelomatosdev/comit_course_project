@@ -1,0 +1,75 @@
+.header {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.8);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.header__logoContainer {
+  min-width: 300px;
+}
+.header__logo {
+  width: 180px;
+  object-fit: contain;
+}
+
+.header__search {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  border-radius: 24px;
+}
+
+.header__searchInput {
+  height: 12px;
+  padding: 10px;
+  border: none;
+  width: 100%;
+}
+
+.header__searchIcon {
+  padding: 5px;
+  height: 22px;
+  background-color: #cd9042;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-evenly;
+  min-width: 400px;
+}
+
+.header__option {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: white;
+}
+
+.header__optionLineOne {
+  font-size: 13px;
+  font-weight: 800;
+}
+.header__optionLineTwo {
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.header__optionChat {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.header__chatCount {
+  margin-left: -15px;
+  margin-right: 10px;
+  color: rgba(255, 100, 0, 0.5);
+}
+
+.optionChat__icon {
+  transform: scale(1.5);
+}

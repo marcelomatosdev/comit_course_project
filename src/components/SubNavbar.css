@@ -1,0 +1,53 @@
+.subnavbar {
+  /* visibility: hidden; */
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  background: rgba(245, 245, 247, 0.6);
+  position: relative;
+  height: 100%;
+  z-index: 1;
+  width: 100%;
+  /* animation-timing-function: 0;
+  transition: opacity 2s; */
+  animation: bounceIn 1s;
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.subnavbar__options {
+  max-width: auto;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  padding-bottom: 35px;
+  margin-left: 20px;
+  margin-right: 20px;
+  transition-timing-function: 3s;
+}
+
+.subnavbar__figure {
+  width: 52px;
+  height: 54px;
+  background-size: 52px 54px;
+  background-repeat: no-repeat;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 40px;
+  margin-inline-end: 40px;
+  /* background-image: url("https://apple.com/v/mac/home/av/images/familybrowser/macbookair__e6welx5nvj0i_large.svg"); */
+}
+.subnavbar__optionLineOne {
+  font-size: 15px;
+  font-weight: 400;
+}
