@@ -8,10 +8,10 @@
   z-index: 100;
 }
 .header__logoContainer {
-  min-width: 300px;
+  min-width: 200px;
 }
 .header__logo {
-  width: 180px;
+  width: 120px;
   object-fit: contain;
 }
 
@@ -38,7 +38,8 @@
 .header__nav {
   display: flex;
   justify-content: space-evenly;
-  min-width: 400px;
+  min-width: 200px;
+  padding-right: 15px;
 }
 
 .header__option {
@@ -49,12 +50,18 @@
   color: white;
 }
 
+.header__option:first-of-type {
+  margin-left: 30px;
+}
+a {
+  color: black;
+}
 .header__optionLineOne {
-  font-size: 13px;
+  font-size: 10px;
   font-weight: 800;
 }
 .header__optionLineTwo {
-  font-size: 13px;
+  font-size: 10px;
   font-weight: 800;
 }
 

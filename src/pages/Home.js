@@ -4,6 +4,7 @@ import Banner_img from "../assets/banner_gray.jpg";
 import Product from "../components/Product";
 import { featured, mac, ipad, iphone } from "../assets/product_example";
 
+
 function Home() {
   return (
     <div className="home">
@@ -15,12 +16,14 @@ function Home() {
           </div>
           <div className="home__featured__products">
             {featured.productDetails.map((item) => (
-              <Product
-                id={item.id}
-                image={item.image}
-                title={item.title}
-                price={item.price}
-              />
+              
+                <Product
+                  id={item.id}
+                  image={item.image}
+                  title={item.title}
+                  price={item.price}
+                />
+       
             ))}
           </div>
         </div>
@@ -30,12 +33,14 @@ function Home() {
           </div>
           <div className="home__row__products">
             {mac.productDetails.map((item) => (
-              <Product
-                id={item.id}
-                image={item.image}
-                title={item.title}
-                price={item.price}
-              />
+
+                <Product
+                  id={item.id}
+                  image={item.image}
+                  title={item.title}
+                  price={item.price}
+                />
+            
             ))}
           </div>
         </div>

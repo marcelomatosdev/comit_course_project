@@ -6,7 +6,7 @@
   height: 100%;
   /* z-index: 1; */
   width: 100%;
-  top: 104px;
+  top: 94px;
   position: sticky;
   z-index: 100;
   animation: bounceIn 1s;
@@ -30,16 +30,16 @@
   justify-content: space-between;
   align-items: center;
   color: black;
-  padding-bottom: 35px;
+  padding-bottom: 15px;
   margin-left: 20px;
   margin-right: 20px;
   transition-timing-function: 3s;
 }
 
 .subnavbar__figure {
-  width: 52px;
-  height: 54px;
-  background-size: 52px 54px;
+  width: 42px;
+  height: 44px;
+  background-size: 42px 44px;
   background-repeat: no-repeat;
   margin-block-start: 1em;
   margin-block-end: 1em;
@@ -48,6 +48,6 @@
   /* background-image: url("https://apple.com/v/mac/home/av/images/familybrowser/macbookair__e6welx5nvj0i_large.svg"); */
 }
 .subnavbar__optionLineOne {
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 400;
 }

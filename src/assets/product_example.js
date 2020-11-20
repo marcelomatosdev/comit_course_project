@@ -1,12 +1,20 @@
 export const featured = {
   productDetails: [
     {
-      id: 2,
+      id: 1,
       title: "iPad Pro 128gb 2019",
       price: "1,200.00",
       image:
         "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/P3wAAOSwyFBfm4W9/$_59.JPG",
       subcategory: "ipad_pro",
+    },
+    {
+      id: 2,
+      title: "MacBook Pro 2016",
+      price: "1,300.00",
+      image:
+        "https://i.ebayimg.com/00/s/NjAwWDgwMA==/z/2QMAAOSwQJlfoHJL/$_59.JPG",
+      subcategory: "macbook_pro",
     },
     {
       id: 3,
@@ -43,6 +51,14 @@ export const mac = {
       image:
         "https://i.ebayimg.com/00/s/ODAwWDY1MA==/z/axcAAOSwK~9e7AJ9/$_59.JPG",
       subcategory: "imac_27",
+    },
+    {
+      id: 4,
+      title: "Apple USB Keyboard",
+      price: "20.00",
+      image:
+        "https://i.ebayimg.com/00/s/NjAwWDgwMA==/z/TtYAAOSw9MZfnwl~/$_59.PNG",
+      subcategory: "mac_accessories",
     },
   ],
 };
@@ -119,7 +135,7 @@ export const iphone = {
     {
       id: 4,
       title: "iPhone 5S 16gb",
-      price: '90.00',
+      price: "90.00",
       image:
         "https://i.ebayimg.com/00/s/ODAwWDYwMA==/z/cOMAAOSwi~dfeoRV/$_59.JPG",
       subcategory: "iphone_5",

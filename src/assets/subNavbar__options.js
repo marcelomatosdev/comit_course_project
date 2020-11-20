@@ -1,7 +1,9 @@
 import React from "react";
+import IconNewish from "../assets/icon__newish.png";
 
 export const mac = {
   navTitleAndFigure: [
+    ["All Macs", IconNewish],
     [
       "MacBook Air",
       "https://apple.com/v/mac/home/av/images/familybrowser/macbookair__e6welx5nvj0i_large.svg",
@@ -31,6 +33,7 @@ export const mac = {
 };
 export const ipad = {
   navTitleAndFigure: [
+    ["All iPads", IconNewish],
     [
       "iPad Pro",
       "https://www.apple.com/v/ipad/home/bg/images/chapternav/ipadpro_light__b2axwqwl0seq_large.svg",
