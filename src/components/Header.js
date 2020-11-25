@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import { auth, db } from "../firebase";
+import { auth } from "../firebase";
+import { UserContext } from "../components/UserContext";
 
 import "./Header.css";
 import SearchIcon from "@material-ui/icons/Search";
@@ -8,7 +9,8 @@ import ChatIcon from "@material-ui/icons/ChatBubbleOutlineOutlined";
 import Logo from "../assets/logo__newish.png";
 
 function Header() {
-  const [user, setUser] = useState(auth.currentUser);
+  const [user, setUser] = useContext(UserContext);
+  // auth.signOut();
 
   const handleAuthentication = () => {
     if (user) {
@@ -16,13 +18,6 @@ function Header() {
       setUser(null);
     }
   };
-
-  auth.onAuthStateChanged(async (authUser) => {
-    if (authUser && (user === undefined || !user)) {
-      const u = await db.collection("users").doc(authUser.uid).get();
-      return setUser(u.data());
-    }
-  });
 
   return (
     <div className="header">
@@ -52,10 +47,12 @@ function Header() {
           <span className="header__optionLineOne">My</span>
           <span className="header__optionLineTwo">Selection</span>
         </div>
-        <div className="header__option">
-          <span className="header__optionLineOne">Sell</span>
-          <span className="header__optionLineTwo">Newish</span>
-        </div>
+        <Link to={"/AddProduct"}>
+          <div className="header__option">
+            <span className="header__optionLineOne">Sell</span>
+            <span className="header__optionLineTwo">Newish</span>
+          </div>
+        </Link>
         <div className="header__optionChat">
           <ChatIcon className="optionChat__icon" />
           <span className="header__optionLineTwo header__chatCount">6</span>
