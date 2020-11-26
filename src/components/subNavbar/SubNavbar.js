@@ -1,6 +1,6 @@
 import React from "react";
 import "./SubNavbar.css";
-import { mac, ipad } from "../assets/subNavbar__options";
+import { mac, ipad } from "../../assets/subNavbar__options";
 
 function SubNavbar({ selectedCategory, isVisible }) {
   selectedCategory = selectedCategory?.toLowerCase();

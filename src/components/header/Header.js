@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import { auth } from "../firebase";
-import { UserContext } from "../components/UserContext";
+import { auth } from "../../firebase";
+import { UserContext } from "../../components/userContext/UserContext";
 
 import "./Header.css";
 import SearchIcon from "@material-ui/icons/Search";
 import ChatIcon from "@material-ui/icons/ChatBubbleOutlineOutlined";
-import Logo from "../assets/logo__newish.png";
+import Logo from "../../assets/logo__newish.png";
 
 function Header() {
   const [user, setUser] = useContext(UserContext);

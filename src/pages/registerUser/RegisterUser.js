@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./RegisterUser.css";
 
-import { auth, db } from "../firebase";
+import { auth, db } from "../../firebase";
 import { useHistory } from "react-router-dom";
 
 function RegisterUser() {

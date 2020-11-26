@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { useHistory } from "react-router-dom";
 import "./AddProduct.css";
 
-import { UserContext } from "../components/UserContext";
+import { UserContext } from "../../components/userContext/UserContext";
 
 function AddProduct() {
   const history = useHistory();

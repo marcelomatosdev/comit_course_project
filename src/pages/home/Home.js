@@ -1,8 +1,8 @@
 import React from "react";
 import "./Home.css";
-import Banner_img from "../assets/banner_gray.jpg";
-import Product from "../components/Product";
-import { featured, mac, ipad, iphone } from "../assets/product_example";
+import Banner_img from "../../assets/banner_gray.jpg";
+import Product from "../../components/product/Product";
+import { featured, mac, ipad, iphone } from "../../assets/product_example";
 
 function Home() {
   return (
