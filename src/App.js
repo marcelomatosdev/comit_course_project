@@ -1,34 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
+import { UserContext } from "./components/userContext/UserContext";
+import { auth, db } from "./firebase";
 
-import Header from "./components/Header";
-import Navbar from "./components/Navbar";
-import Home from "./pages/Home";
-import ProductDetail from "./pages/ProductDetail";
-import Login from "./pages/Login";
-import RegisterUser from "./pages/RegisterUser";
+import Header from "./components/header/Header";
+import Navbar from "./components/navbar/Navbar";
+import Home from "./pages/home/Home";
+import ProductDetail from "./pages/productDetail/ProductDetail";
+import Login from "./pages/login/Login";
+import RegisterUser from "./pages/registerUser/RegisterUser";
+import AddProduct from "./pages/addProduct/AddProduct";
 
 function App() {
+  const [user, setUser] = useState(auth.currentUser);
+  auth.onAuthStateChanged(async (authUser) => {
+    if (authUser && (user === undefined || !user)) {
+      console.log(authUser);
+      const u = await db.collection("users").doc(authUser.uid).get();
+      return setUser(u.data());
+    }
+  });
   return (
     <Router>
       <div className="App">
-        <Header />
-        <Navbar />
-        <Switch>
-          <Route path="/RegisterUser">
-            <RegisterUser />
-          </Route>
-          <Route path="/Login">
-            <Login />
-          </Route>
-          <Route path="/ProductDetail">
-            <ProductDetail />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
+        <UserContext.Provider value={[user, setUser]}>
+          <Header />
+          <Navbar />
+          <Switch>
+            <Route path="/AddProduct" component={AddProduct} />
+            <Route path="/RegisterUser" component={RegisterUser} />
+            <Route path="/Login" component={Login} />
+            <Route path="/ProductDetail" component={ProductDetail} />
+            <Route exact path="/" component={Home} />
+          </Switch>
+        </UserContext.Provider>
       </div>
     </Router>
   );

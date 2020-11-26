@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Navbar.css";
-import SubNavbar from "./SubNavbar";
+import SubNavbar from "../subNavbar/SubNavbar";
 
 function Navbar() {
   const [showSubNavbar, setShowSubNavbar] = useState(false);
