@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
-import { UserContext } from "./components/userContext/UserContext";
+import { UserContext } from "./store/userContext/UserContext";
 import { auth, db } from "./firebase";
 
 import Header from "./components/header/Header";
@@ -11,12 +11,12 @@ import ProductDetail from "./pages/productDetail/ProductDetail";
 import Login from "./pages/login/Login";
 import RegisterUser from "./pages/registerUser/RegisterUser";
 import AddProduct from "./pages/addProduct/AddProduct";
+import ManageProducts from "./pages/manageProducts/ManageProducts";
 
 function App() {
   const [user, setUser] = useState(auth.currentUser);
   auth.onAuthStateChanged(async (authUser) => {
     if (authUser && (user === undefined || !user)) {
-      console.log(authUser);
       const u = await db.collection("users").doc(authUser.uid).get();
       return setUser(u.data());
     }
@@ -28,6 +28,7 @@ function App() {
           <Header />
           <Navbar />
           <Switch>
+            <Route path="/ManageProducts" component={ManageProducts} />
             <Route path="/AddProduct" component={AddProduct} />
             <Route path="/RegisterUser" component={RegisterUser} />
             <Route path="/Login" component={Login} />

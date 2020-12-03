@@ -1,0 +1,72 @@
+body {
+  background-color: rgb(249, 249, 249);
+}
+
+.addProduct {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 700px;
+  align-items: flex-start;
+  min-width: 200px;
+  height: 700px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 100px;
+  padding: 30px;
+  background-color: white;
+}
+
+.addProduct label {
+  display: flex;
+  text-align: left;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.addProduct input {
+  width: 700px;
+  height: 24px;
+  margin-bottom: 35px;
+}
+.addProduct textarea {
+  width: 700px;
+  margin-bottom: 35px;
+}
+.addProduct__price input {
+  width: 250px;
+}
+
+.addProduct select {
+  width: 200px;
+  margin-bottom: 35px;
+}
+
+.addProduct button {
+  display: flex;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  background: #f0c14b;
+  border: 1px solid;
+  border-radius: 2px;
+  width: 50%;
+  height: 30px;
+  margin-top: 10px;
+  border-color: #a88734 #9c7e31 #846a29;
+  color: #111;
+}
+
+/* Remove Arrows/Spinners */
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}

@@ -22,8 +22,6 @@ function Navbar() {
         : true
     );
   }
-  console.log(showSubNavbar);
-  console.log(selectedCategory);
 
   return (
     <>
