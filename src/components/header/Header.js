@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { auth } from "../../firebase";
-import { UserContext } from "../../components/userContext/UserContext";
+import { UserContext } from "../../store/userContext/UserContext";
 
 import "./Header.css";
 import SearchIcon from "@material-ui/icons/Search";
@@ -43,14 +43,16 @@ function Header() {
             </span>
           </div>
         </Link>
-        <div className="header__option">
-          <span className="header__optionLineOne">My</span>
-          <span className="header__optionLineTwo">Selection</span>
-        </div>
-        <Link to={"/AddProduct"}>
+        <Link to={"/addProduct"}>
           <div className="header__option">
             <span className="header__optionLineOne">Sell</span>
-            <span className="header__optionLineTwo">Newish</span>
+            <span className="header__optionLineTwo">Product</span>
+          </div>
+        </Link>
+        <Link to={"/ManageProducts"}>
+          <div className="header__option">
+            <span className="header__optionLineOne">Manage</span>
+            <span className="header__optionLineTwo">Products</span>
           </div>
         </Link>
         <div className="header__optionChat">
